@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jade Thornton College Prep | Independent College Admissions Counselor</title>
+<meta name="description" content="Jade Thornton College Prep offers one-on-one college admissions counseling — personalized college lists, essay guidance, and application strategy for students in Denver and nationwide.">
+<meta name="keywords" content="college counselor, college admissions consultant, independent education consultant, essay coaching, college list, Denver college counselor">
+<meta name="author" content="Jade Thornton">
+<link rel="canonical" href="https://www.jadethorntoncollegeprep.com/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Jade Thornton College Prep | Independent College Admissions Counselor">
+<meta property="og:description" content="One-on-one college admissions counseling — personalized college lists, essay guidance, and application strategy.">
+<meta property="og:url" content="https://www.jadethorntoncollegeprep.com/">
+<meta name="twitter:card" content="summary">
+
+<meta name="robots" content="index, follow">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&family=Fraunces:wght@500;600;700&family=Playfair+Display:wght@600;700&family=Source+Serif+4:wght@400;500;600&family=Poppins:wght@500;600;700&family=Work+Sans:wght@400;500;600&family=Kaushan+Script&display=swap" rel="stylesheet">
+<!-- NOTE: this loads several font families to power the on-page design customizer below.
+     Once you've settled on a font pairing, trim this link down to just the 2-3 families
+     you're keeping — it'll make the page load faster. -->
+
+
+<!-- Structured data for local SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Jade Thornton College Prep",
+  "description": "Independent college admissions counseling: personalized college lists, essay coaching, and application strategy.",
+  "founder": {
+    "@type": "Person",
+    "name": "Jade Thornton",
+    "alumniOf": "Stanford University"
+  },
+  "areaServed": "United States",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Denver",
+    "addressRegion": "CO",
+    "addressCountry": "US"
+  },
+  "email": "jadephare@gmail.com",
+  "telephone": "+1-720-289-3471",
+  "url": "https://www.jadethorntoncollegeprep.com/"
+}
+</script>
+
+<style>
+  /* ============================================================
+     DESIGN TOKENS — change your colors and fonts here.
+     The on-page "Customize" panel (bottom-right of the live site)
+     edits these same variables live so you can preview changes
+     before committing to them in code.
+     ============================================================ */
+  :root{
+    /* Colors — inspired by the business card: cream background, navy ink,
+       violet/blue/green wave accents */
+    --bg:#FBF6EC;          /* page background */
+    --bg-alt:#F2EBDA;      /* alternating section background */
+    --ink:#1C1B4B;         /* main text color (deep navy, from the card) */
+    --ink-soft:#4E4D7A;    /* secondary text */
+    --ink-faint:#84829F;   /* tertiary/caption text */
+    --accent:#6C4FE0;      /* primary accent — violet, from the card */
+    --accent-dark:#4D36AE; /* accent, darkened (hover states) */
+    --accent-soft:#E8E1FB; /* accent, lightened (badges, tints) */
+    --gold:#3FA34D;        /* secondary accent — leaf green, from the card */
+    --line:#E4DCC8;        /* hairline borders */
+    --paper:#FFFFFF;       /* card backgrounds */
+    --wave-blue:#4C7EFF;   /* used only in the wave graphics */
+
+    /* Fonts — pick from the customizer or edit these lines directly.
+       Options loaded: Space Grotesk, Fraunces, Playfair Display, Poppins (display)
+                        Inter, Source Serif 4, Work Sans (body)
+                        IBM Plex Mono (labels/dates, fixed)
+                        Kaushan Script (wordmark only, fixed) */
+    --font-display:'Space Grotesk', sans-serif;
+    --font-body:'Inter', sans-serif;
+    --font-mono:'IBM Plex Mono', monospace;
+    --font-script:'Kaushan Script', cursive;
+
+    --radius:14px;
+    --max:1120px;
+    --shadow: 0 1px 2px rgba(28,27,75,0.05), 0 8px 24px rgba(28,27,75,0.08);
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; scroll-behavior:auto !important;}
+  }
+
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:var(--font-body), -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  h1,h2,h3{
+    font-family:var(--font-display);
+    font-weight:700;
+    line-height:1.12;
+    margin:0;
+    letter-spacing:-0.01em;
+  }
+
+  p{margin:0;}
+  a{color:inherit;}
+  img,svg{display:block; max-width:100%;}
+  .container{max-width:var(--max); margin:0 auto; padding:0 24px;}
+
+  .eyebrow{
+    font-family:var(--font-mono);
+    font-size:12.5px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--accent-dark);
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+  }
+  .eyebrow::before{
+    content:"";
+    width:18px;
+    height:1px;
+    background:var(--accent);
+    display:inline-block;
+  }
+
+  /* Skip link */
+  .skip-link{
+    position:absolute; left:-999px; top:auto;
+    background:var(--ink); color:#fff; padding:12px 18px; border-radius:8px; z-index:200;
+  }
+  .skip-link:focus{ left:16px; top:16px; }
+
+  :focus-visible{
+    outline:2.5px solid var(--accent);
+    outline-offset:3px;
+    border-radius:4px;
+  }
+
+  /* ---------- Header / Nav ---------- */
+  header{
+    position:sticky; top:0; z-index:100;
+    background:rgba(250,250,248,0.88);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:16px 24px;
+  }
+  .logo{
+    font-family:var(--font-display);
+    font-weight:700;
+    font-size:18px;
+    letter-spacing:-0.01em;
+    text-decoration:none;
+    color:var(--ink);
+    display:flex; align-items:center; gap:10px;
+  }
+  .logo-mark{
+    width:12px; height:12px; border-radius:50%;
+    background:var(--accent);
+    flex:none;
+  }
+  .logo-text{
+    display:flex; align-items:baseline; gap:9px; flex-wrap:wrap;
+  }
+  .logo-script{
+    font-family:var(--font-script);
+    font-size:23px;
+    line-height:1;
+    color:var(--ink);
+  }
+  .logo-tag{
+    font-family:var(--font-mono);
+    font-size:9.5px;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color:var(--accent-dark);
+    background:var(--accent-soft);
+    padding:3px 8px;
+    border-radius:999px;
+    white-space:nowrap;
+  }
+  .nav-links{
+    display:none;
+    align-items:center;
+    gap:32px;
+    list-style:none;
+    margin:0; padding:0;
+  }
+  .nav-links a{
+    text-decoration:none;
+    font-size:14.5px;
+    font-weight:500;
+    color:var(--ink-soft);
+    transition:color .15s ease;
+  }
+  .nav-links a:hover{color:var(--accent-dark);}
+  .nav-cta{
+    display:none;
+    text-decoration:none;
+    background:var(--ink);
+    color:#fff !important;
+    font-size:14px;
+    font-weight:600;
+    padding:10px 18px;
+    border-radius:999px;
+    transition:background .15s ease;
+  }
+  .nav-cta:hover{background:var(--accent-dark);}
+
+  .menu-btn{
+    display:inline-flex;
+    background:none; border:1px solid var(--line); border-radius:8px;
+    width:40px; height:40px;
+    align-items:center; justify-content:center;
+    cursor:pointer;
+  }
+  .menu-btn svg{width:18px; height:18px;}
+
+  .mobile-menu{
+    display:none;
+    flex-direction:column;
+    padding:6px 24px 20px;
+    border-top:1px solid var(--line);
+  }
+  .mobile-menu.open{display:flex;}
+  .mobile-menu a{
+    text-decoration:none; color:var(--ink); font-weight:500;
+    padding:12px 0; border-bottom:1px solid var(--line);
+    font-size:15px;
+  }
+  .mobile-menu a:last-child{border-bottom:none;}
+  .mobile-cta{
+    margin-top:14px;
+    text-align:center;
+    background:var(--ink); color:#fff;
+    padding:12px; border-radius:999px;
+    text-decoration:none; font-weight:600; font-size:14.5px;
+  }
+
+  .brand-ribbon{
+    display:block;
+    width:100%;
+    height:10px;
+  }
+
+  @media(min-width:900px){
+    .nav-links{display:flex;}
+    .nav-cta{display:inline-block;}
+    .menu-btn{display:none;}
+  }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    padding:64px 0 72px;
+    overflow:hidden;
+  }
+  .hero-grid{
+    display:grid;
+    gap:44px;
+  }
+  .hero h1{
+    font-size:clamp(34px, 6vw, 54px);
+    margin-top:18px;
+    max-width:15ch;
+  }
+  .mark{
+    position:relative;
+    white-space:nowrap;
+  }
+  .mark svg{
+    position:absolute;
+    left:-2%;
+    bottom:-0.08em;
+    width:104%;
+    height:0.42em;
+    z-index:-1;
+  }
+  .mark path{
+    stroke:var(--accent-soft);
+    stroke-width:14;
+    fill:none;
+    stroke-linecap:round;
+    stroke-dasharray:340;
+    stroke-dashoffset:340;
+    animation:draw 0.9s 0.5s cubic-bezier(.4,0,.2,1) forwards;
+  }
+  @keyframes draw{ to{stroke-dashoffset:0;} }
+
+  .hero p.lede{
+    margin-top:20px;
+    font-size:17.5px;
+    color:var(--ink-soft);
+    max-width:46ch;
+  }
+  .hero-ctas{
+    margin-top:30px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px;
+  }
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    text-decoration:none;
+    font-weight:600; font-size:15px;
+    padding:13px 22px;
+    border-radius:999px;
+    transition:transform .15s ease, background .15s ease, border-color .15s ease;
+  }
+  .btn-primary{ background:var(--ink); color:#fff; }
+  .btn-primary:hover{ background:var(--accent-dark); transform:translateY(-1px); }
+  .btn-ghost{ background:transparent; color:var(--ink); border:1px solid var(--line); }
+  .btn-ghost:hover{ border-color:var(--accent); color:var(--accent-dark); }
+
+  .hero-photo{
+    position:relative;
+    justify-self:center;
+    width:100%;
+    max-width:340px;
+  }
+  .photo-frame{
+    aspect-ratio:4/5;
+    border-radius:20px;
+    background:var(--bg-alt);
+    border:1.5px dashed var(--accent);
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    gap:10px;
+    color:var(--accent-dark);
+    text-align:center;
+    padding:20px;
+  }
+  .photo-frame svg{width:34px; height:34px;}
+  .photo-frame span{font-size:13px; font-weight:600;}
+  .photo-frame small{font-size:11.5px; color:var(--ink-faint); font-weight:500;}
+  .corner-chip{
+    position:absolute;
+    bottom:-16px; left:-16px;
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:12px 16px;
+    box-shadow:var(--shadow);
+    font-family:var(--font-mono);
+    font-size:12px;
+    color:var(--ink-soft);
+  }
+  .corner-chip strong{color:var(--ink); font-family:var(--font-display); display:block; font-size:15px;}
+
+  @media(min-width:860px){
+    .hero-grid{grid-template-columns:1.15fr 0.85fr; align-items:center;}
+    .hero-photo{justify-self:end;}
+  }
+
+  /* ---------- Section shells ---------- */
+  section{ padding:76px 0; }
+  .section-alt{ background:var(--bg-alt); }
+  .section-head{ max-width:640px; margin-bottom:44px; }
+  .section-head h2{ font-size:clamp(26px,4vw,36px); margin-top:14px; }
+  .section-head p{ margin-top:14px; color:var(--ink-soft); font-size:16px; }
+
+  /* ---------- About ---------- */
+  .about-grid{
+    display:grid;
+    gap:40px;
+  }
+  .about-body p{ color:var(--ink-soft); font-size:16px; margin-bottom:16px; }
+  .about-body p:last-child{margin-bottom:0;}
+  .check-list{ list-style:none; margin:24px 0 0; padding:0; display:grid; gap:12px; }
+  .check-list li{ display:flex; gap:10px; align-items:flex-start; font-size:15px; color:var(--ink); }
+  .check-list svg{ flex:none; width:19px; height:19px; margin-top:2px; color:var(--accent); }
+
+  .acceptances{
+    margin-top:32px;
+    padding-top:28px;
+    border-top:1px solid var(--line);
+  }
+  .acceptances .eyebrow{ margin-bottom:14px; }
+  .chip-row{ display:flex; flex-wrap:wrap; gap:10px; }
+  .chip{
+    font-size:13.5px; font-weight:600; color:var(--ink-soft);
+    background:var(--paper); border:1px solid var(--line);
+    padding:8px 14px; border-radius:999px;
+  }
+
+  @media(min-width:860px){
+    .about-grid{ grid-template-columns:0.85fr 1.15fr; }
+  }
+
+  /* ---------- Philosophy ---------- */
+  .philosophy-wrap{
+    max-width:760px; margin:0 auto; text-align:center;
+  }
+  .quote-mark{
+    font-family:var(--font-display);
+    font-size:64px; color:var(--accent); line-height:1;
+    margin-bottom:6px;
+  }
+  .philosophy-wrap blockquote{
+    margin:0;
+    font-family:var(--font-display);
+    font-weight:600;
+    font-size:clamp(21px, 3.4vw, 30px);
+    line-height:1.42;
+    color:var(--ink);
+  }
+  .placeholder-tag{
+    display:inline-block;
+    margin-top:22px;
+    font-family:var(--font-mono);
+    font-size:12px;
+    color:var(--accent-dark);
+    background:var(--accent-soft);
+    padding:7px 12px;
+    border-radius:999px;
+  }
+
+  /* ---------- Credentials / Memberships ---------- */
+  .timeline{
+    display:grid;
+    gap:0;
+    border-top:1px solid var(--line);
+  }
+  .t-row{
+    display:grid;
+    gap:6px 28px;
+    padding:26px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .t-date{
+    font-family:var(--font-mono);
+    font-size:13px;
+    color:var(--accent-dark);
+    font-weight:500;
+  }
+  .t-content h3{ font-size:18px; font-weight:600; }
+  .t-role{ font-size:14px; color:var(--ink-faint); margin-top:3px; font-weight:500; }
+  .t-desc{ font-size:14.5px; color:var(--ink-soft); margin-top:10px; max-width:60ch; }
+
+  @media(min-width:760px){
+    .t-row{ grid-template-columns:180px 1fr; align-items:baseline; }
+  }
+
+  /* ---------- Reviews ---------- */
+  .review-grid{
+    display:grid;
+    gap:20px;
+  }
+  .review-card{
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:26px;
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+    box-shadow:var(--shadow);
+  }
+  .stars{ display:flex; gap:3px; color:var(--gold); }
+  .stars svg{ width:15px; height:15px; }
+  .review-card p{ font-size:15px; color:var(--ink); line-height:1.65; }
+  .review-source{
+    font-size:13px; color:var(--ink-faint); font-weight:600;
+    display:flex; align-items:center; gap:8px;
+  }
+  .placeholder-badge{
+    font-family:var(--font-mono);
+    font-size:10.5px;
+    letter-spacing:.04em;
+    text-transform:uppercase;
+    color:var(--accent-dark);
+    background:var(--accent-soft);
+    padding:3px 8px;
+    border-radius:6px;
+    width:fit-content;
+  }
+  @media(min-width:720px){ .review-grid{ grid-template-columns:repeat(3,1fr); } }
+
+  /* ---------- Footer / Contact ---------- */
+  footer{
+    background:var(--ink);
+    color:#EDEFEE;
+    padding:64px 0 32px;
+    position:relative;
+    overflow:hidden;
+  }
+  .footer-waves{
+    position:absolute;
+    top:-30px; right:-40px;
+    width:260px; height:260px;
+    opacity:0.55;
+    pointer-events:none;
+  }
+  .footer-top{
+    display:grid;
+    gap:36px;
+    padding-bottom:40px;
+    border-bottom:1px solid rgba(255,255,255,0.12);
+    position:relative;
+  }
+  .footer-top h2{
+    color:#fff;
+    font-size:clamp(24px,3.6vw,32px);
+    text-transform:uppercase;
+    letter-spacing:0.01em;
+  }
+  .footer-top p{ color:#C7C4E8; margin-top:12px; max-width:44ch; font-size:15px; }
+  .contact-list{ list-style:none; margin:26px 0 0; padding:0; display:grid; gap:14px; }
+  .contact-list a{
+    display:flex; align-items:center; gap:12px;
+    text-decoration:none; color:#fff; font-weight:600; font-size:16.5px;
+  }
+  .contact-list svg{ width:19px; height:19px; color:var(--wave-blue); flex:none; }
+  .contact-note{ font-size:11.5px; color:#8683A8; margin-top:6px; font-family:var(--font-mono); }
+
+  .footer-bottom{
+    display:flex; flex-direction:column; gap:10px;
+    padding-top:24px; font-size:13px; color:#8683A8;
+  }
+  @media(min-width:760px){
+    .footer-bottom{ flex-direction:row; justify-content:space-between; }
+  }
+
+  .reveal{
+    opacity:0; transform:translateY(14px);
+    transition:opacity .6s ease, transform .6s ease;
+  }
+  .reveal.in{ opacity:1; transform:none; }
+
+  /* ============================================================
+     DESIGN CUSTOMIZER — preview-only tool for you, the site owner.
+     Delete this whole CSS block (and the matching HTML + JS blocks,
+     each marked with START/END comments) before you publish, unless
+     you're happy leaving it live for future tweaks.
+     ============================================================ */
+  .customizer-toggle{
+    position:fixed; bottom:20px; right:20px; z-index:150;
+    width:52px; height:52px; border-radius:50%;
+    background:var(--ink); color:#fff; border:none;
+    display:flex; align-items:center; justify-content:center;
+    cursor:pointer; box-shadow:var(--shadow);
+    transition:transform .15s ease;
+  }
+  .customizer-toggle:hover{ transform:rotate(24deg); }
+  .customizer-toggle svg{ width:22px; height:22px; }
+
+  .customizer-panel{
+    position:fixed; bottom:82px; right:20px; z-index:150;
+    width:min(300px, calc(100vw - 40px));
+    background:var(--paper); border:1px solid var(--line); border-radius:16px;
+    padding:20px; box-shadow:var(--shadow);
+    font-family:'Inter', sans-serif;
+  }
+  .customizer-panel[hidden]{ display:none; }
+  .customizer-panel h3{
+    font-family:'Inter', sans-serif; font-size:15px; font-weight:700; color:var(--ink);
+  }
+  .customizer-panel > p{
+    font-size:12.5px; color:var(--ink-faint); margin-top:6px; line-height:1.5;
+  }
+  .customizer-field{ margin-top:16px; display:block; }
+  .customizer-field span{
+    display:block; font-size:12px; font-weight:600; color:var(--ink-soft); margin-bottom:6px;
+  }
+  .customizer-field select{
+    width:100%; padding:9px 10px; border-radius:8px; border:1px solid var(--line);
+    font-size:13px; background:var(--bg); color:var(--ink); font-family:'Inter',sans-serif;
+  }
+  .color-row{ display:flex; align-items:center; gap:10px; margin-top:16px; }
+  .color-row span{ font-size:12px; font-weight:600; color:var(--ink-soft); flex:1; }
+  .color-row input[type="color"]{
+    width:36px; height:36px; border-radius:8px; border:1px solid var(--line);
+    padding:0; cursor:pointer; background:none;
+  }
+  .customizer-actions{ display:flex; gap:10px; margin-top:18px; }
+  .customizer-actions button{
+    flex:1; padding:9px 10px; border-radius:8px; font-size:12.5px; font-weight:600;
+    cursor:pointer; font-family:'Inter',sans-serif;
+  }
+  #resetDesign{ background:none; border:1px solid var(--line); color:var(--ink-soft); }
+  #copyCss{ background:var(--ink); border:1px solid var(--ink); color:#fff; }
+  .customizer-copied{ font-size:11.5px; color:var(--accent-dark); margin-top:8px; display:none; }
+  .customizer-copied.show{ display:block; }
+  .customizer-note{
+    font-size:11px !important; color:var(--ink-faint) !important;
+    margin-top:14px !important; padding-top:12px; border-top:1px solid var(--line);
+  }
+  .customizer-note code{ background:var(--bg-alt); padding:1px 5px; border-radius:4px; }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header>
+  <nav class="nav container" aria-label="Primary">
+    <a href="#home" class="logo">
+      <span class="logo-mark" aria-hidden="true"></span>
+      <span class="logo-text">
+        <span class="logo-script">Jade Thornton</span>
+        <span class="logo-tag">College Prep</span>
+      </span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#philosophy">Philosophy</a></li>
+      <li><a href="#credentials">Credentials</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Get in touch</a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about">About</a>
+    <a href="#philosophy">Philosophy</a>
+    <a href="#credentials">Credentials</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact" class="mobile-cta">Get in touch</a>
+  </div>
+  <svg class="brand-ribbon" viewBox="0 0 1200 40" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0,28 C50,14 100,42 150,28 C200,14 250,42 300,28 C350,14 400,42 450,28 C500,14 550,42 600,28 C650,14 700,42 750,28 C800,14 850,42 900,28 C950,14 1000,42 1050,28 C1100,14 1150,42 1200,28" stroke="#3FA34D" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <path d="M0,21 C50,7 100,35 150,21 C200,7 250,35 300,21 C350,7 400,35 450,21 C500,7 550,35 600,21 C650,7 700,35 750,21 C800,7 850,35 900,21 C950,7 1000,35 1050,21 C1100,7 1150,35 1200,21" stroke="#1C1B4B" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <path d="M0,14 C50,0 100,28 150,14 C200,0 250,28 300,14 C350,0 400,28 450,14 C500,0 550,28 600,14 C650,0 700,28 750,14 C800,0 850,28 900,14 C950,0 1000,28 1050,14 C1100,0 1150,28 1200,14" stroke="#6C4FE0" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <path d="M0,7 C50,-7 100,21 150,7 C200,-7 250,21 300,7 C350,-7 400,21 450,7 C500,-7 550,21 600,7 C650,-7 700,21 750,7 C800,-7 850,21 900,7 C950,-7 1000,21 1050,7 C1100,-7 1150,21 1200,7" stroke="#4C7EFF" stroke-width="5" fill="none" stroke-linecap="round"/>
+  </svg>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">Independent College Admissions Counseling</span>
+        <h1>Helping students find the college that actually <span class="mark">fits<svg viewBox="0 0 200 30" preserveAspectRatio="none" aria-hidden="true"><path d="M4,20 C60,4 140,4 196,18"/></svg></span></h1>
+        <p class="lede">One-on-one guidance through college lists, essays, and applications — from a Stanford graduate and independent education consultant working with students in Denver and nationwide.</p>
+        <div class="hero-ctas">
+          <a href="#contact" class="btn btn-primary">Book a consultation</a>
+          <a href="#about" class="btn btn-ghost">Meet Jade</a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <div class="photo-frame">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 20c0-4 3.5-6 8-6s8 2 8 6" stroke-linecap="round"/><circle cx="12" cy="8" r="4"/></svg>
+          <span>Add your photo here</span>
+          <small>Replace this frame with a headshot</small>
+        </div>
+        <div class="corner-chip">
+          <strong>Stanford '19</strong>
+          Symbolic Systems, Cognitive Science
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">About Jade</span>
+        <h2>A counselor who's been on both sides of the process</h2>
+      </div>
+      <div class="about-grid">
+        <div class="reveal">
+          <ul class="check-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Independent Education Consultant since 2024</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>B.A. Symbolic Systems, Stanford University</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Four-year Division I athlete, Stanford Women's Crew</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Trained life coach, Lumina Life Coach Essentials</li>
+          </ul>
+        </div>
+        <div class="about-body reveal">
+          <p>Jade Thornton is an independent college admissions counselor based in Denver, Colorado, working with students across the country. She holds a B.A. in Symbolic Systems from Stanford University, where she concentrated in cognitive science, rowed for four years with Stanford Women's Crew, and volunteered with Girls Who Code teaching coding fundamentals to low-income students.</p>
+          <p>Since 2024, Jade has guided high school students individually through every stage of admissions — building a personalized college list, developing application strategy, and drafting essays that sound like the student, not a template. She's currently enrolled in UCLA's College Counseling Certification Program and is a Provisional Member of the Higher Education Consultants Association (HECA).</p>
+          <p>Her background in cognitive science and life coaching shapes how she works: helping students get clear on what they actually want before worrying about what looks good on paper.</p>
+
+          <div class="acceptances">
+            <span class="eyebrow">Recent student acceptances</span>
+            <div class="chip-row">
+              <span class="chip">Vanderbilt</span>
+              <span class="chip">Tulane</span>
+              <span class="chip">Boston College</span>
+              <span class="chip">St. Olaf</span>
+              <span class="chip">University of Miami</span>
+              <span class="chip">UC Santa Barbara</span>
+              <span class="chip">UC Santa Cruz</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHILOSOPHY -->
+  <section id="philosophy" class="section-alt">
+    <div class="container philosophy-wrap reveal">
+      <div class="quote-mark" aria-hidden="true">&ldquo;</div>
+      <blockquote>
+        [Add 2–3 sentences here on your counseling philosophy — what drives your approach, how you work with students, and what you want families to know before they reach out.]
+      </blockquote>
+      <span class="placeholder-tag">Placeholder — replace with your own words</span>
+    </div>
+  </section>
+
+  <!-- CREDENTIALS / MEMBERSHIPS -->
+  <section id="credentials">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Credentials &amp; Memberships</span>
+        <h2>Ongoing training, current on the field</h2>
+        <p>Admissions practices shift every year. Jade stays active in professional training and national counseling networks so her guidance reflects what's actually happening on campuses today.</p>
+      </div>
+
+      <div class="timeline reveal">
+        <div class="t-row">
+          <div class="t-date">Spring 2025 &ndash; Present</div>
+          <div class="t-content">
+            <h3>UCLA College Counseling Certification Program</h3>
+            <div class="t-role">Student &middot; Remote, USA</div>
+            <p class="t-desc">Enrolled in a comprehensive program to deepen expertise in college admissions counseling.</p>
+          </div>
+        </div>
+        <div class="t-row">
+          <div class="t-date">April 2026 &ndash; Present</div>
+          <div class="t-content">
+            <h3>Higher Education Consultants Association (HECA)</h3>
+            <div class="t-role">Provisional Member &middot; previously Student Affiliate, Spring 2025&ndash;April 2026</div>
+            <p class="t-desc">Engaged with a national network of college counseling professionals to stay informed on best practices and industry trends.</p>
+          </div>
+        </div>
+        <div class="t-row">
+          <div class="t-date">Spring 2023</div>
+          <div class="t-content">
+            <h3>Lumina Life Coach Essentials Program</h3>
+            <div class="t-role">Student &middot; Remote, USA</div>
+            <p class="t-desc">Completed life coaching coursework and pro bono coaching sessions, coaching clients on topics from relationships to time management.</p>
+          </div>
+        </div>
+        <div class="t-row">
+          <div class="t-date">June 2019</div>
+          <div class="t-content">
+            <h3>Stanford University</h3>
+            <div class="t-role">B.A. Symbolic Systems, Concentration in Cognitive Science &middot; Stanford, CA</div>
+            <p class="t-desc">Four-year collegiate rower with Stanford Women's Crew; volunteered with Girls Who Code teaching coding fundamentals.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section id="reviews" class="section-alt">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Reviews</span>
+        <h2>What families are saying</h2>
+      </div>
+      <div class="review-grid reveal">
+        <div class="review-card">
+          <span class="placeholder-badge">Placeholder review</span>
+          <div class="stars" aria-hidden="true">
+            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.3L10 14.9 4.4 18.1l1.4-6.3L1 7.5l6.4-.6z"/></svg>
+            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.3L10 14.9 4.4 18.1l1.4-6.3L1 7.5l6.4-.6z"/></svg>
+            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.3L10 14.9 4.4 18.1l1.4-6.3L1 7.5l6.4-.6z"/></svg>
+            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.3L10 14.9 4.4 18.1l1.4-6.3L1 7.5l6.4-.6z"/></svg>
+            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.3L10 14.9 4.4 18.1l1.4-6.3L1 7.5l6.4-.6z"/></svg>
+          </div>
+          <p>[Add a testimonial quote here — what the family said about working with Jade.]</p>
+          <div class="review-source">[Parent or student name, School]</div>
+        </div>
+        <div class="review-card">
+          <span class="placeholder-badge">Placeholder review</span>
+          <div class="stars" aria-hidden="true">
+            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.3L10 14.9 4.4 18.1l1.4-6.3L1 7.5l6.4-.6z"/></svg>
+            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.3L10 14.9 4.4 18.1l1.4-6.3L1 7.5l6.4-.6z"/></svg>
+            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.3L10 14.9 4.4 18.1l1.4-6.3L1 7.5l6.4-.6z"/></svg>
+            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.3L10 14.9 4.4 18.1l1.4-6.3L1 7.5l6.4-.6z"/></svg>
+            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.3L10 14.9 4.4 18.1l1.4-6.3L1 7.5l6.4-.6z"/></svg>
+          </div>
+          <p>[Add a testimonial quote here — what the family said about working with Jade.]</p>
+          <div class="review-source">[Parent or student name, School]</div>
+        </div>
+        <div class="review-card">
+          <span class="placeholder-badge">Placeholder review</span>
+          <div class="stars" aria-hidden="true">
+            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.3L10 14.9 4.4 18.1l1.4-6.3L1 7.5l6.4-.6z"/></svg>
+            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.3L10 14.9 4.4 18.1l1.4-6.3L1 7.5l6.4-.6z"/></svg>
+            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.3L10 14.9 4.4 18.1l1.4-6.3L1 7.5l6.4-.6z"/></svg>
+            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.3L10 14.9 4.4 18.1l1.4-6.3L1 7.5l6.4-.6z"/></svg>
+            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.3L10 14.9 4.4 18.1l1.4-6.3L1 7.5l6.4-.6z"/></svg>
+          </div>
+          <p>[Add a testimonial quote here — what the family said about working with Jade.]</p>
+          <div class="review-source">[Parent or student name, School]</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER / CONTACT -->
+<footer id="contact">
+  <svg class="footer-waves" viewBox="0 0 260 260" fill="none" aria-hidden="true">
+    <path d="M-20,60 C60,10 120,150 340,50" stroke="#8FDA9B" stroke-width="16" stroke-linecap="round"/>
+    <path d="M-20,95 C60,45 120,185 340,85" stroke="#B9A6FF" stroke-width="16" stroke-linecap="round"/>
+    <path d="M-20,130 C60,80 120,220 340,120" stroke="#9FC0FF" stroke-width="16" stroke-linecap="round"/>
+    <path d="M-20,165 C60,115 120,255 340,155" stroke="#EDEFEE" stroke-width="16" stroke-linecap="round" opacity="0.5"/>
+  </svg>
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <span class="eyebrow" style="color:var(--wave-blue);">Get in touch</span>
+        <h2>Let's work together!</h2>
+        <p>Reach out to set up an introductory call — we'll talk about where your student is in the process and how Jade can help.</p>
+        <ul class="contact-list">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+            <a href="mailto:jadephare@gmail.com">jadephare@gmail.com</a>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.3 1.8.6 2.7a2 2 0 01-.4 2.1L8.1 9.7a16 16 0 006 6l1.2-1.2a2 2 0 012.1-.4c.9.3 1.8.5 2.7.6a2 2 0 011.9 2.2z"/></svg>
+            <a href="tel:+17202893471">720-289-3471</a>
+          </li>
+        </ul>
+        <div class="contact-note">Want a different email or number here later? Just update the links above.</div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> Jade Thornton College Prep. All rights reserved.</span>
+      <span>Denver, CO &middot; Remote, USA</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== DESIGN CUSTOMIZER (HTML) — delete this block before publishing if you don't want visitors to see it ===== -->
+<button class="customizer-toggle" id="customizerToggle" aria-expanded="false" aria-controls="customizerPanel" aria-label="Open design customizer">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 11-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009.6 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 11-2.83-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 8.6a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 112.83-2.83l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 112.83 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+</button>
+<div class="customizer-panel" id="customizerPanel" hidden>
+  <h3>Customize design</h3>
+  <p>Preview colors and fonts live. This panel is for you, not site visitors — see the note below.</p>
+
+  <label class="customizer-field">
+    <span>Font pairing</span>
+    <select id="fontPreset">
+      <option value="modern">Modern Sans (default)</option>
+      <option value="academic">Classic Academic</option>
+      <option value="elegant">Elegant Serif</option>
+      <option value="friendly">Friendly Rounded</option>
+    </select>
+  </label>
+
+  <div class="color-row">
+    <span>Accent color</span>
+    <input type="color" id="accentColor" value="#6C4FE0">
+  </div>
+  <div class="color-row">
+    <span>Background</span>
+    <input type="color" id="bgColor" value="#FBF6EC">
+  </div>
+  <div class="color-row">
+    <span>Text color</span>
+    <input type="color" id="inkColor" value="#1C1B4B">
+  </div>
+
+  <div class="customizer-actions">
+    <button type="button" id="resetDesign">Reset</button>
+    <button type="button" id="copyCss">Copy CSS</button>
+  </div>
+  <p class="customizer-copied" id="copiedMsg">Copied — paste into the :root block near the top of the file.</p>
+
+  <p class="customizer-note">Happy with it? Click <strong>Copy CSS</strong>, paste the values into the <code>:root</code> section near the top of the file so they're permanent, then delete the "DESIGN CUSTOMIZER" block (marked in the code) so visitors don't see this panel.</p>
+</div>
+<!-- ===== END DESIGN CUSTOMIZER (HTML) ===== -->
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  menuBtn.addEventListener('click', () => {
+    const open = mobileMenu.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  mobileMenu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!prefersReduced && 'IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  } else {
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
+  }
+
+  /* ===== DESIGN CUSTOMIZER (JS) — delete this block before publishing if you don't want visitors to see it ===== */
+  (function(){
+    const root = document.documentElement.style;
+    const STORAGE_KEY = 'jtcp-design-preview';
+
+    const DEFAULTS = { preset:'modern', accent:'#6C4FE0', bg:'#FBF6EC', ink:'#1C1B4B' };
+
+    const PRESETS = {
+      modern:   { display:"'Space Grotesk', sans-serif", body:"'Inter', sans-serif" },
+      academic: { display:"'Fraunces', serif",           body:"'Inter', sans-serif" },
+      elegant:  { display:"'Playfair Display', serif",   body:"'Source Serif 4', serif" },
+      friendly: { display:"'Poppins', sans-serif",        body:"'Work Sans', sans-serif" }
+    };
+
+    function hexToRgb(hex){
+      hex = hex.replace('#','');
+      if (hex.length === 3) hex = hex.split('').map(c => c+c).join('');
+      const num = parseInt(hex, 16);
+      return { r:(num>>16)&255, g:(num>>8)&255, b:num&255 };
+    }
+    function toHex(n){ return Math.round(Math.max(0,Math.min(255,n))).toString(16).padStart(2,'0'); }
+    function rgbToHex(r,g,b){ return '#'+toHex(r)+toHex(g)+toHex(b); }
+    function mix(hex1, hex2, weight){
+      const c1 = hexToRgb(hex1), c2 = hexToRgb(hex2);
+      return rgbToHex(
+        c1.r + (c2.r-c1.r)*weight,
+        c1.g + (c2.g-c1.g)*weight,
+        c1.b + (c2.b-c1.b)*weight
+      );
+    }
+
+    function applyPreset(key){
+      const p = PRESETS[key] || PRESETS.modern;
+      root.setProperty('--font-display', p.display);
+      root.setProperty('--font-body', p.body);
+    }
+    function applyAccent(hex){
+      root.setProperty('--accent', hex);
+      root.setProperty('--accent-dark', mix(hex, '#000000', 0.28));
+      root.setProperty('--accent-soft', mix(hex, '#ffffff', 0.84));
+    }
+    function applyBg(hex){
+      root.setProperty('--bg', hex);
+      root.setProperty('--bg-alt', mix(hex, '#000000', 0.05));
+    }
+    function applyInk(hex){
+      root.setProperty('--ink', hex);
+      root.setProperty('--ink-soft', mix(hex, '#ffffff', 0.35));
+      root.setProperty('--ink-faint', mix(hex, '#ffffff', 0.55));
+    }
+
+    const toggle = document.getElementById('customizerToggle');
+    const panel = document.getElementById('customizerPanel');
+    const fontPreset = document.getElementById('fontPreset');
+    const accentColor = document.getElementById('accentColor');
+    const bgColor = document.getElementById('bgColor');
+    const inkColor = document.getElementById('inkColor');
+    const resetBtn = document.getElementById('resetDesign');
+    const copyBtn = document.getElementById('copyCss');
+    const copiedMsg = document.getElementById('copiedMsg');
+
+    function currentState(){
+      return {
+        preset: fontPreset.value,
+        accent: accentColor.value,
+        bg: bgColor.value,
+        ink: inkColor.value
+      };
+    }
+    function applyState(state){
+      applyPreset(state.preset);
+      applyAccent(state.accent);
+      applyBg(state.bg);
+      applyInk(state.ink);
+      fontPreset.value = state.preset;
+      accentColor.value = state.accent;
+      bgColor.value = state.bg;
+      inkColor.value = state.ink;
+    }
+    function save(){
+      try { localStorage.setItem(STORAGE_KEY, JSON.stringify(currentState())); } catch(e){}
+    }
+
+    // Load saved preview state, if any
+    let initial = DEFAULTS;
+    try {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (saved) initial = JSON.parse(saved);
+    } catch(e){}
+    applyState(initial);
+
+    toggle.addEventListener('click', () => {
+      const open = panel.hasAttribute('hidden');
+      if (open) { panel.removeAttribute('hidden'); toggle.setAttribute('aria-expanded','true'); }
+      else { panel.setAttribute('hidden',''); toggle.setAttribute('aria-expanded','false'); }
+    });
+
+    [fontPreset, accentColor, bgColor, inkColor].forEach(el => {
+      el.addEventListener('input', () => { applyState(currentState()); save(); });
+    });
+
+    resetBtn.addEventListener('click', () => {
+      try { localStorage.removeItem(STORAGE_KEY); } catch(e){}
+      applyState(DEFAULTS);
+    });
+
+    copyBtn.addEventListener('click', () => {
+      const s = currentState();
+      const p = PRESETS[s.preset] || PRESETS.modern;
+      const css =
+`--bg:${s.bg};
+--bg-alt:${mix(s.bg,'#000000',0.05)};
+--ink:${s.ink};
+--ink-soft:${mix(s.ink,'#ffffff',0.35)};
+--ink-faint:${mix(s.ink,'#ffffff',0.55)};
+--accent:${s.accent};
+--accent-dark:${mix(s.accent,'#000000',0.28)};
+--accent-soft:${mix(s.accent,'#ffffff',0.84)};
+--font-display:${p.display};
+--font-body:${p.body};`;
+      const finish = () => {
+        copiedMsg.classList.add('show');
+        setTimeout(() => copiedMsg.classList.remove('show'), 2500);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(css).then(finish).catch(finish);
+      } else {
+        finish();
+      }
+    });
+  })();
+  /* ===== END DESIGN CUSTOMIZER (JS) ===== */
+</script>
+
+</body>
+</html>
