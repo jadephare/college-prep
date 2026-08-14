@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Jade Thornton College Prep | Independent College Admissions Counselor</title>
-<meta name="description" content="Jade Thornton College Prep offers one-on-one college admissions counseling — personalized college lists, essay guidance, and application strategy for students in Denver and nationwide.">
+<meta name="description" content="Jade Thornton College Prep offers one-on-one college admissions counseling: personalized college lists, essay guidance, and application strategy for students in Denver and nationwide.">
 <meta name="keywords" content="college counselor, college admissions consultant, independent education consultant, essay coaching, college list, Denver college counselor">
 <meta name="author" content="Jade Thornton">
 <link rel="canonical" href="https://www.jadethorntoncollegeprep.com/">
@@ -12,7 +12,7 @@
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Jade Thornton College Prep | Independent College Admissions Counselor">
-<meta property="og:description" content="One-on-one college admissions counseling — personalized college lists, essay guidance, and application strategy.">
+<meta property="og:description" content="One-on-one college admissions counseling: personalized college lists, essay guidance, and application strategy.">
 <meta property="og:url" content="https://www.jadethorntoncollegeprep.com/">
 <meta name="twitter:card" content="summary">
 
@@ -20,10 +20,9 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&family=Fraunces:wght@500;600;700&family=Playfair+Display:wght@600;700&family=Source+Serif+4:wght@400;500;600&family=Poppins:wght@500;600;700&family=Work+Sans:wght@400;500;600&family=Kaushan+Script&display=swap" rel="stylesheet">
-<!-- NOTE: this loads several font families to power the on-page design customizer below.
-     Once you've settled on a font pairing, trim this link down to just the 2-3 families
-     you're keeping — it'll make the page load faster. -->
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&family=Fraunces:wght@500;600;700&family=Playfair+Display:wght@600;700&family=Source+Serif+4:wght@400;500;600&family=Poppins:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<!-- NOTE: this loads several font families. Trim this link down to just the 2-3
+     families actually used in the CSS below to make the page load faster. -->
 
 
 <!-- Structured data for local SEO -->
@@ -74,15 +73,13 @@
     --paper:#FFFFFF;       /* card backgrounds */
     --wave-blue:#4C7EFF;   /* used only in the wave graphics */
 
-    /* Fonts — pick from the customizer or edit these lines directly.
+    /* Fonts — edit these lines directly to change the pairing.
        Options loaded: Space Grotesk, Fraunces, Playfair Display, Poppins (display)
                         Inter, Source Serif 4, Work Sans (body)
-                        IBM Plex Mono (labels/dates, fixed)
-                        Kaushan Script (wordmark only, fixed) */
+                        IBM Plex Mono (labels/dates, fixed) */
     --font-display:'Space Grotesk', sans-serif;
     --font-body:'Inter', sans-serif;
     --font-mono:'IBM Plex Mono', monospace;
-    --font-script:'Kaushan Script', cursive;
 
     --radius:14px;
     --max:1120px;
@@ -176,11 +173,13 @@
     flex:none;
   }
   .logo-text{
-    display:flex; align-items:baseline; gap:9px; flex-wrap:wrap;
+    display:flex; align-items:center; gap:9px; flex-wrap:wrap;
   }
   .logo-script{
-    font-family:var(--font-script);
-    font-size:23px;
+    font-family:var(--font-display);
+    font-weight:700;
+    letter-spacing:-0.01em;
+    font-size:20px;
     line-height:1;
     color:var(--ink);
   }
@@ -245,12 +244,13 @@
     font-size:15px;
   }
   .mobile-menu a:last-child{border-bottom:none;}
-  .mobile-cta{
+  .mobile-menu a.mobile-cta{
     margin-top:14px;
     text-align:center;
     background:var(--ink); color:#fff;
     padding:12px; border-radius:999px;
     text-decoration:none; font-weight:600; font-size:14.5px;
+    border-bottom:none;
   }
 
   .brand-ribbon{
@@ -491,6 +491,19 @@
   }
   @media(min-width:720px){ .review-grid{ grid-template-columns:repeat(3,1fr); } }
 
+  /* ---------- Scheduling ---------- */
+  .schedule-wrap{
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    overflow:hidden;
+  }
+  .calendly-inline-widget{
+    min-width:280px;
+    height:700px;
+  }
+
   /* ---------- Footer / Contact ---------- */
   footer{
     background:var(--ink);
@@ -542,65 +555,6 @@
   }
   .reveal.in{ opacity:1; transform:none; }
 
-  /* ============================================================
-     DESIGN CUSTOMIZER — preview-only tool for you, the site owner.
-     Delete this whole CSS block (and the matching HTML + JS blocks,
-     each marked with START/END comments) before you publish, unless
-     you're happy leaving it live for future tweaks.
-     ============================================================ */
-  .customizer-toggle{
-    position:fixed; bottom:20px; right:20px; z-index:150;
-    width:52px; height:52px; border-radius:50%;
-    background:var(--ink); color:#fff; border:none;
-    display:flex; align-items:center; justify-content:center;
-    cursor:pointer; box-shadow:var(--shadow);
-    transition:transform .15s ease;
-  }
-  .customizer-toggle:hover{ transform:rotate(24deg); }
-  .customizer-toggle svg{ width:22px; height:22px; }
-
-  .customizer-panel{
-    position:fixed; bottom:82px; right:20px; z-index:150;
-    width:min(300px, calc(100vw - 40px));
-    background:var(--paper); border:1px solid var(--line); border-radius:16px;
-    padding:20px; box-shadow:var(--shadow);
-    font-family:'Inter', sans-serif;
-  }
-  .customizer-panel[hidden]{ display:none; }
-  .customizer-panel h3{
-    font-family:'Inter', sans-serif; font-size:15px; font-weight:700; color:var(--ink);
-  }
-  .customizer-panel > p{
-    font-size:12.5px; color:var(--ink-faint); margin-top:6px; line-height:1.5;
-  }
-  .customizer-field{ margin-top:16px; display:block; }
-  .customizer-field span{
-    display:block; font-size:12px; font-weight:600; color:var(--ink-soft); margin-bottom:6px;
-  }
-  .customizer-field select{
-    width:100%; padding:9px 10px; border-radius:8px; border:1px solid var(--line);
-    font-size:13px; background:var(--bg); color:var(--ink); font-family:'Inter',sans-serif;
-  }
-  .color-row{ display:flex; align-items:center; gap:10px; margin-top:16px; }
-  .color-row span{ font-size:12px; font-weight:600; color:var(--ink-soft); flex:1; }
-  .color-row input[type="color"]{
-    width:36px; height:36px; border-radius:8px; border:1px solid var(--line);
-    padding:0; cursor:pointer; background:none;
-  }
-  .customizer-actions{ display:flex; gap:10px; margin-top:18px; }
-  .customizer-actions button{
-    flex:1; padding:9px 10px; border-radius:8px; font-size:12.5px; font-weight:600;
-    cursor:pointer; font-family:'Inter',sans-serif;
-  }
-  #resetDesign{ background:none; border:1px solid var(--line); color:var(--ink-soft); }
-  #copyCss{ background:var(--ink); border:1px solid var(--ink); color:#fff; }
-  .customizer-copied{ font-size:11.5px; color:var(--accent-dark); margin-top:8px; display:none; }
-  .customizer-copied.show{ display:block; }
-  .customizer-note{
-    font-size:11px !important; color:var(--ink-faint) !important;
-    margin-top:14px !important; padding-top:12px; border-top:1px solid var(--line);
-  }
-  .customizer-note code{ background:var(--bg-alt); padding:1px 5px; border-radius:4px; }
 </style>
 </head>
 <body>
@@ -620,8 +574,9 @@
       <li><a href="#philosophy">Philosophy</a></li>
       <li><a href="#credentials">Credentials</a></li>
       <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#schedule">Schedule</a></li>
     </ul>
-    <a href="#contact" class="nav-cta">Get in touch</a>
+    <a href="#schedule" class="nav-cta">Get in touch</a>
     <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
     </button>
@@ -631,7 +586,7 @@
     <a href="#philosophy">Philosophy</a>
     <a href="#credentials">Credentials</a>
     <a href="#reviews">Reviews</a>
-    <a href="#contact" class="mobile-cta">Get in touch</a>
+    <a href="#schedule" class="mobile-cta">Get in touch</a>
   </div>
   <svg class="brand-ribbon" viewBox="0 0 1200 40" preserveAspectRatio="none" aria-hidden="true">
     <path d="M0,28 C50,14 100,42 150,28 C200,14 250,42 300,28 C350,14 400,42 450,28 C500,14 550,42 600,28 C650,14 700,42 750,28 C800,14 850,42 900,28 C950,14 1000,42 1050,28 C1100,14 1150,42 1200,28" stroke="#3FA34D" stroke-width="5" fill="none" stroke-linecap="round"/>
@@ -649,10 +604,9 @@
       <div>
         <span class="eyebrow">Independent College Admissions Counseling</span>
         <h1>Helping students find the college that actually <span class="mark">fits<svg viewBox="0 0 200 30" preserveAspectRatio="none" aria-hidden="true"><path d="M4,20 C60,4 140,4 196,18"/></svg></span></h1>
-        <p class="lede">One-on-one guidance through college lists, essays, and applications — from a Stanford graduate and independent education consultant working with students in Denver and nationwide.</p>
+        <p class="lede">One-on-one guidance through college lists, essays, and applications, from a Stanford graduate and independent education consultant working with students in Denver and nationwide.</p>
         <div class="hero-ctas">
-          <a href="#contact" class="btn btn-primary">Book a consultation</a>
-          <a href="#about" class="btn btn-ghost">Meet Jade</a>
+          <a href="#schedule" class="btn btn-primary">Book a meeting</a>
         </div>
       </div>
       <div class="hero-photo">
@@ -683,7 +637,7 @@
         </div>
         <div class="about-body reveal">
           <p>Jade Thornton is an independent college admissions counselor based in Denver, Colorado, working with students across the country. She holds a B.A. in Symbolic Systems from Stanford University, where she concentrated in cognitive science, rowed for four years with Stanford Women's Crew, and volunteered with Girls Who Code teaching coding fundamentals to low-income students.</p>
-          <p>Since 2024, Jade has guided high school students individually through every stage of admissions — building a personalized college list, developing application strategy, and drafting essays that sound like the student, not a template. She's currently enrolled in UCLA's College Counseling Certification Program and is a Provisional Member of the Higher Education Consultants Association (HECA).</p>
+          <p>Since 2024, Jade has guided high school students individually through every stage of admissions: building a personalized college list, developing application strategy, and drafting essays that sound like the student, not a template. She's currently enrolled in UCLA's College Counseling Certification Program and is a Provisional Member of the Higher Education Consultants Association (HECA).</p>
           <p>Her background in cognitive science and life coaching shapes how she works: helping students get clear on what they actually want before worrying about what looks good on paper.</p>
 
           <div class="acceptances">
@@ -708,9 +662,9 @@
     <div class="container philosophy-wrap reveal">
       <div class="quote-mark" aria-hidden="true">&ldquo;</div>
       <blockquote>
-        [Add 2–3 sentences here on your counseling philosophy — what drives your approach, how you work with students, and what you want families to know before they reach out.]
+        [Add 2–3 sentences here on your counseling philosophy: what drives your approach, how you work with students, and what you want families to know before they reach out.]
       </blockquote>
-      <span class="placeholder-tag">Placeholder — replace with your own words</span>
+      <span class="placeholder-tag">Placeholder: replace with your own words</span>
     </div>
   </section>
 
@@ -777,7 +731,7 @@
             <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.3L10 14.9 4.4 18.1l1.4-6.3L1 7.5l6.4-.6z"/></svg>
             <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.3L10 14.9 4.4 18.1l1.4-6.3L1 7.5l6.4-.6z"/></svg>
           </div>
-          <p>[Add a testimonial quote here — what the family said about working with Jade.]</p>
+          <p>[Add a testimonial quote here: what the family said about working with Jade.]</p>
           <div class="review-source">[Parent or student name, School]</div>
         </div>
         <div class="review-card">
@@ -789,7 +743,7 @@
             <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.3L10 14.9 4.4 18.1l1.4-6.3L1 7.5l6.4-.6z"/></svg>
             <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.3L10 14.9 4.4 18.1l1.4-6.3L1 7.5l6.4-.6z"/></svg>
           </div>
-          <p>[Add a testimonial quote here — what the family said about working with Jade.]</p>
+          <p>[Add a testimonial quote here: what the family said about working with Jade.]</p>
           <div class="review-source">[Parent or student name, School]</div>
         </div>
         <div class="review-card">
@@ -801,9 +755,26 @@
             <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.3L10 14.9 4.4 18.1l1.4-6.3L1 7.5l6.4-.6z"/></svg>
             <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.3L10 14.9 4.4 18.1l1.4-6.3L1 7.5l6.4-.6z"/></svg>
           </div>
-          <p>[Add a testimonial quote here — what the family said about working with Jade.]</p>
+          <p>[Add a testimonial quote here: what the family said about working with Jade.]</p>
           <div class="review-source">[Parent or student name, School]</div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCHEDULE / CALENDLY -->
+  <section id="schedule">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Schedule a Meeting</span>
+        <h2>Find a time that works for you</h2>
+        <p>Pick a time below to book a 45-minute introductory call.</p>
+      </div>
+      <div class="schedule-wrap reveal">
+        <!-- Calendly inline widget begin -->
+        <div class="calendly-inline-widget" data-url="https://calendly.com/jadephare/45-minute?hide_event_type_details=1&background_color=ffffff&text_color=1c1b4b&primary_color=6c4fe0" style="min-width:280px;height:700px;"></div>
+        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+        <!-- Calendly inline widget end -->
       </div>
     </div>
   </section>
@@ -823,18 +794,14 @@
       <div>
         <span class="eyebrow" style="color:var(--wave-blue);">Get in touch</span>
         <h2>Let's work together!</h2>
-        <p>Reach out to set up an introductory call — we'll talk about where your student is in the process and how Jade can help.</p>
         <ul class="contact-list">
           <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
-            <a href="mailto:jadephare@gmail.com">jadephare@gmail.com</a>
+            <a href="mailto:jadephare@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>jadephare@gmail.com</a>
           </li>
           <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.3 1.8.6 2.7a2 2 0 01-.4 2.1L8.1 9.7a16 16 0 006 6l1.2-1.2a2 2 0 012.1-.4c.9.3 1.8.5 2.7.6a2 2 0 011.9 2.2z"/></svg>
-            <a href="tel:+17202893471">720-289-3471</a>
+            <a href="tel:+17202893471"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.3 1.8.6 2.7a2 2 0 01-.4 2.1L8.1 9.7a16 16 0 006 6l1.2-1.2a2 2 0 012.1-.4c.9.3 1.8.5 2.7.6a2 2 0 011.9 2.2z"/></svg>720-289-3471</a>
           </li>
         </ul>
-        <div class="contact-note">Want a different email or number here later? Just update the links above.</div>
       </div>
     </div>
     <div class="footer-bottom">
@@ -843,47 +810,6 @@
     </div>
   </div>
 </footer>
-
-<!-- ===== DESIGN CUSTOMIZER (HTML) — delete this block before publishing if you don't want visitors to see it ===== -->
-<button class="customizer-toggle" id="customizerToggle" aria-expanded="false" aria-controls="customizerPanel" aria-label="Open design customizer">
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 11-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009.6 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 11-2.83-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 8.6a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 112.83-2.83l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 112.83 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
-</button>
-<div class="customizer-panel" id="customizerPanel" hidden>
-  <h3>Customize design</h3>
-  <p>Preview colors and fonts live. This panel is for you, not site visitors — see the note below.</p>
-
-  <label class="customizer-field">
-    <span>Font pairing</span>
-    <select id="fontPreset">
-      <option value="modern">Modern Sans (default)</option>
-      <option value="academic">Classic Academic</option>
-      <option value="elegant">Elegant Serif</option>
-      <option value="friendly">Friendly Rounded</option>
-    </select>
-  </label>
-
-  <div class="color-row">
-    <span>Accent color</span>
-    <input type="color" id="accentColor" value="#6C4FE0">
-  </div>
-  <div class="color-row">
-    <span>Background</span>
-    <input type="color" id="bgColor" value="#FBF6EC">
-  </div>
-  <div class="color-row">
-    <span>Text color</span>
-    <input type="color" id="inkColor" value="#1C1B4B">
-  </div>
-
-  <div class="customizer-actions">
-    <button type="button" id="resetDesign">Reset</button>
-    <button type="button" id="copyCss">Copy CSS</button>
-  </div>
-  <p class="customizer-copied" id="copiedMsg">Copied — paste into the :root block near the top of the file.</p>
-
-  <p class="customizer-note">Happy with it? Click <strong>Copy CSS</strong>, paste the values into the <code>:root</code> section near the top of the file so they're permanent, then delete the "DESIGN CUSTOMIZER" block (marked in the code) so visitors don't see this panel.</p>
-</div>
-<!-- ===== END DESIGN CUSTOMIZER (HTML) ===== -->
 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
@@ -916,138 +842,6 @@
     document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
   }
 
-  /* ===== DESIGN CUSTOMIZER (JS) — delete this block before publishing if you don't want visitors to see it ===== */
-  (function(){
-    const root = document.documentElement.style;
-    const STORAGE_KEY = 'jtcp-design-preview';
-
-    const DEFAULTS = { preset:'modern', accent:'#6C4FE0', bg:'#FBF6EC', ink:'#1C1B4B' };
-
-    const PRESETS = {
-      modern:   { display:"'Space Grotesk', sans-serif", body:"'Inter', sans-serif" },
-      academic: { display:"'Fraunces', serif",           body:"'Inter', sans-serif" },
-      elegant:  { display:"'Playfair Display', serif",   body:"'Source Serif 4', serif" },
-      friendly: { display:"'Poppins', sans-serif",        body:"'Work Sans', sans-serif" }
-    };
-
-    function hexToRgb(hex){
-      hex = hex.replace('#','');
-      if (hex.length === 3) hex = hex.split('').map(c => c+c).join('');
-      const num = parseInt(hex, 16);
-      return { r:(num>>16)&255, g:(num>>8)&255, b:num&255 };
-    }
-    function toHex(n){ return Math.round(Math.max(0,Math.min(255,n))).toString(16).padStart(2,'0'); }
-    function rgbToHex(r,g,b){ return '#'+toHex(r)+toHex(g)+toHex(b); }
-    function mix(hex1, hex2, weight){
-      const c1 = hexToRgb(hex1), c2 = hexToRgb(hex2);
-      return rgbToHex(
-        c1.r + (c2.r-c1.r)*weight,
-        c1.g + (c2.g-c1.g)*weight,
-        c1.b + (c2.b-c1.b)*weight
-      );
-    }
-
-    function applyPreset(key){
-      const p = PRESETS[key] || PRESETS.modern;
-      root.setProperty('--font-display', p.display);
-      root.setProperty('--font-body', p.body);
-    }
-    function applyAccent(hex){
-      root.setProperty('--accent', hex);
-      root.setProperty('--accent-dark', mix(hex, '#000000', 0.28));
-      root.setProperty('--accent-soft', mix(hex, '#ffffff', 0.84));
-    }
-    function applyBg(hex){
-      root.setProperty('--bg', hex);
-      root.setProperty('--bg-alt', mix(hex, '#000000', 0.05));
-    }
-    function applyInk(hex){
-      root.setProperty('--ink', hex);
-      root.setProperty('--ink-soft', mix(hex, '#ffffff', 0.35));
-      root.setProperty('--ink-faint', mix(hex, '#ffffff', 0.55));
-    }
-
-    const toggle = document.getElementById('customizerToggle');
-    const panel = document.getElementById('customizerPanel');
-    const fontPreset = document.getElementById('fontPreset');
-    const accentColor = document.getElementById('accentColor');
-    const bgColor = document.getElementById('bgColor');
-    const inkColor = document.getElementById('inkColor');
-    const resetBtn = document.getElementById('resetDesign');
-    const copyBtn = document.getElementById('copyCss');
-    const copiedMsg = document.getElementById('copiedMsg');
-
-    function currentState(){
-      return {
-        preset: fontPreset.value,
-        accent: accentColor.value,
-        bg: bgColor.value,
-        ink: inkColor.value
-      };
-    }
-    function applyState(state){
-      applyPreset(state.preset);
-      applyAccent(state.accent);
-      applyBg(state.bg);
-      applyInk(state.ink);
-      fontPreset.value = state.preset;
-      accentColor.value = state.accent;
-      bgColor.value = state.bg;
-      inkColor.value = state.ink;
-    }
-    function save(){
-      try { localStorage.setItem(STORAGE_KEY, JSON.stringify(currentState())); } catch(e){}
-    }
-
-    // Load saved preview state, if any
-    let initial = DEFAULTS;
-    try {
-      const saved = localStorage.getItem(STORAGE_KEY);
-      if (saved) initial = JSON.parse(saved);
-    } catch(e){}
-    applyState(initial);
-
-    toggle.addEventListener('click', () => {
-      const open = panel.hasAttribute('hidden');
-      if (open) { panel.removeAttribute('hidden'); toggle.setAttribute('aria-expanded','true'); }
-      else { panel.setAttribute('hidden',''); toggle.setAttribute('aria-expanded','false'); }
-    });
-
-    [fontPreset, accentColor, bgColor, inkColor].forEach(el => {
-      el.addEventListener('input', () => { applyState(currentState()); save(); });
-    });
-
-    resetBtn.addEventListener('click', () => {
-      try { localStorage.removeItem(STORAGE_KEY); } catch(e){}
-      applyState(DEFAULTS);
-    });
-
-    copyBtn.addEventListener('click', () => {
-      const s = currentState();
-      const p = PRESETS[s.preset] || PRESETS.modern;
-      const css =
-`--bg:${s.bg};
---bg-alt:${mix(s.bg,'#000000',0.05)};
---ink:${s.ink};
---ink-soft:${mix(s.ink,'#ffffff',0.35)};
---ink-faint:${mix(s.ink,'#ffffff',0.55)};
---accent:${s.accent};
---accent-dark:${mix(s.accent,'#000000',0.28)};
---accent-soft:${mix(s.accent,'#ffffff',0.84)};
---font-display:${p.display};
---font-body:${p.body};`;
-      const finish = () => {
-        copiedMsg.classList.add('show');
-        setTimeout(() => copiedMsg.classList.remove('show'), 2500);
-      };
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(css).then(finish).catch(finish);
-      } else {
-        finish();
-      }
-    });
-  })();
-  /* ===== END DESIGN CUSTOMIZER (JS) ===== */
 </script>
 
 </body>
