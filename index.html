@@ -302,8 +302,32 @@
   }
   @keyframes draw{ to{stroke-dashoffset:0;} }
 
-  .hero p.lede{
-    margin-top:20px;
+  .hero-list{
+    margin:20px 0 0;
+    padding:0;
+    list-style:none;
+    display:grid;
+    gap:11px;
+    max-width:46ch;
+  }
+  .hero-list li{
+    display:flex;
+    align-items:flex-start;
+    gap:11px;
+    font-size:17px;
+    color:var(--ink-soft);
+    line-height:1.5;
+  }
+  .hero-list li::before{
+    content:"";
+    width:8px; height:8px;
+    border-radius:50%;
+    background:var(--accent);
+    flex:none;
+    margin-top:8px;
+  }
+  .hero-follow{
+    margin-top:18px;
     font-size:17.5px;
     color:var(--ink-soft);
     max-width:46ch;
@@ -430,32 +454,6 @@
     border-radius:999px;
   }
 
-  /* ---------- Credentials / Memberships ---------- */
-  .timeline{
-    display:grid;
-    gap:0;
-    border-top:1px solid var(--line);
-  }
-  .t-row{
-    display:grid;
-    gap:6px 28px;
-    padding:26px 0;
-    border-bottom:1px solid var(--line);
-  }
-  .t-date{
-    font-family:var(--font-mono);
-    font-size:13px;
-    color:var(--accent-dark);
-    font-weight:500;
-  }
-  .t-content h3{ font-size:18px; font-weight:600; }
-  .t-role{ font-size:14px; color:var(--ink-faint); margin-top:3px; font-weight:500; }
-  .t-desc{ font-size:14.5px; color:var(--ink-soft); margin-top:10px; max-width:60ch; }
-
-  @media(min-width:760px){
-    .t-row{ grid-template-columns:180px 1fr; align-items:baseline; }
-  }
-
   /* ---------- Reviews ---------- */
   .review-grid{
     display:grid;
@@ -490,6 +488,59 @@
     width:fit-content;
   }
   @media(min-width:720px){ .review-grid{ grid-template-columns:repeat(3,1fr); } }
+
+  /* ---------- Packages ---------- */
+  .package-grid{
+    display:grid;
+    gap:20px;
+  }
+  .package-card{
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:30px 26px;
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+    box-shadow:var(--shadow);
+    position:relative;
+  }
+  .package-card.featured{
+    border-color:var(--accent);
+    box-shadow:0 1px 2px rgba(28,27,75,0.05), 0 14px 32px rgba(108,79,224,0.18);
+  }
+  .package-featured-tag{
+    position:absolute;
+    top:-12px; left:26px;
+    background:var(--accent);
+    color:#fff;
+    font-family:var(--font-mono);
+    font-size:10.5px;
+    letter-spacing:.04em;
+    text-transform:uppercase;
+    padding:4px 10px;
+    border-radius:999px;
+  }
+  .package-card h3{ font-size:20px; }
+  .package-tagline{ font-size:14px; color:var(--ink-soft); }
+  .package-list{ list-style:none; margin:4px 0 0; padding:0; display:grid; gap:10px; flex:1; }
+  .package-list li{ display:flex; gap:9px; align-items:flex-start; font-size:14.5px; color:var(--ink); }
+  .package-list svg{ flex:none; width:17px; height:17px; margin-top:2px; color:var(--accent); }
+  .package-cta{
+    margin-top:6px;
+    text-align:center;
+    text-decoration:none;
+    font-weight:600; font-size:14.5px;
+    padding:11px 18px;
+    border-radius:999px;
+    border:1px solid var(--line);
+    color:var(--ink);
+    transition:border-color .15s ease, color .15s ease, background .15s ease;
+  }
+  .package-cta:hover{ border-color:var(--accent); color:var(--accent-dark); }
+  .package-card.featured .package-cta{ background:var(--ink); color:#fff; border-color:var(--ink); }
+  .package-card.featured .package-cta:hover{ background:var(--accent-dark); border-color:var(--accent-dark); }
+  @media(min-width:720px){ .package-grid{ grid-template-columns:repeat(3,1fr); } }
 
   /* ---------- Scheduling ---------- */
   .schedule-wrap{
@@ -570,9 +621,9 @@
       </span>
     </a>
     <ul class="nav-links">
-      <li><a href="#about">About</a></li>
       <li><a href="#philosophy">Philosophy</a></li>
-      <li><a href="#credentials">Credentials</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#packages">Packages</a></li>
       <li><a href="#reviews">Reviews</a></li>
       <li><a href="#schedule">Schedule</a></li>
     </ul>
@@ -582,9 +633,9 @@
     </button>
   </nav>
   <div class="mobile-menu" id="mobileMenu">
-    <a href="#about">About</a>
     <a href="#philosophy">Philosophy</a>
-    <a href="#credentials">Credentials</a>
+    <a href="#about">About</a>
+    <a href="#packages">Packages</a>
     <a href="#reviews">Reviews</a>
     <a href="#schedule" class="mobile-cta">Get in touch</a>
   </div>
@@ -603,8 +654,13 @@
     <div class="container hero-grid">
       <div>
         <span class="eyebrow">Independent College Admissions Counseling</span>
-        <h1>Helping students find the college that actually <span class="mark">fits<svg viewBox="0 0 200 30" preserveAspectRatio="none" aria-hidden="true"><path d="M4,20 C60,4 140,4 196,18"/></svg></span></h1>
-        <p class="lede">One-on-one guidance through college lists, essays, and applications, from a Stanford graduate and independent educational consultant working with students in Denver and beyond.</p>
+        <h1>Helping students find the college that <span class="mark">fits<svg viewBox="0 0 200 30" preserveAspectRatio="none" aria-hidden="true"><path d="M4,20 C60,4 140,4 196,18"/></svg></span></h1>
+        <ul class="hero-list">
+          <li>One-on-one guidance for college lists, essays, applications, and more</li>
+          <li>Empowering students in their college discovery process</li>
+          <li>Supporting students through what's ahead, from list to launch</li>
+        </ul>
+        <p class="hero-follow">Your kid is ready for this next chapter. We know this can be a stressful time and we'll manage the logistics that come with getting there. With expert knowledge and experience, we're here to help.</p>
         <div class="hero-ctas">
           <a href="#schedule" class="btn btn-primary">Book a meeting</a>
         </div>
@@ -612,27 +668,39 @@
       <div class="hero-photo">
        <img src="jade-headshot.jpeg" alt="Jade Thornton, independent college admissions counselor" class="photo-frame">
         <div class="corner-chip">
-          <strong>Stanford grad</strong>
-          Symbolic Systems, Cognitive Science
+          <strong>Independent Educational Consultant</strong>
+          (she/her)
         </div>
       </div>
     </div>
   </section>
 
+  <!-- PHILOSOPHY -->
+  <section id="philosophy">
+    <div class="container philosophy-wrap reveal">
+      <div class="quote-mark" aria-hidden="true">&ldquo;</div>
+      <blockquote>
+        I love supporting curious students to find a school where they will thrive. If you value lifelong learning and want a counselor with a student-centered approach, we'd be a good match.
+      </blockquote>
+      <span class="placeholder-tag">Jade Thornton</span>
+    </div>
+  </section>
+
   <!-- ABOUT -->
-  <section id="about">
+  <section id="about" class="section-alt">
     <div class="container">
       <div class="section-head reveal">
         <span class="eyebrow">About Jade</span>
-        <h2>Empowering students to thrive at the college they choose</h2>
+        <h2>Who you're working with</h2>
       </div>
       <div class="about-grid">
         <div class="reveal">
           <ul class="check-list">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Independent Education Consultant since 2024</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Independent Educational Consultant since 2024</li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>B.S. Symbolic Systems, Stanford University</li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Four-year Division I athlete, Stanford Women's Crew</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Mom of a pup named Shasta</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Proud parent of a pup named Shasta</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Avid reader, ahead of my goal to read 52 books this year</li>
           </ul>
         </div>
         <div class="about-body reveal">
@@ -650,6 +718,10 @@
               <span class="chip">University of Miami</span>
               <span class="chip">UC Santa Barbara</span>
               <span class="chip">UC Santa Cruz</span>
+              <span class="chip">Colorado State University</span>
+              <span class="chip">CU Boulder</span>
+              <span class="chip">UT Austin</span>
+              <span class="chip">Lewis and Clark</span>
             </div>
           </div>
         </div>
@@ -657,58 +729,45 @@
     </div>
   </section>
 
-  <!-- PHILOSOPHY -->
-  <section id="philosophy" class="section-alt">
-    <div class="container philosophy-wrap reveal">
-      <div class="quote-mark" aria-hidden="true">&ldquo;</div>
-      <blockquote>
-        [Add 2–3 sentences here on your counseling philosophy: what drives your approach, how you work with students, and what you want families to know before they reach out.]
-      </blockquote>
-      <span class="placeholder-tag">Placeholder: replace with your own words</span>
-    </div>
-  </section>
-
-  <!-- CREDENTIALS / MEMBERSHIPS -->
-  <section id="credentials">
+  <!-- PACKAGES -->
+  <section id="packages">
     <div class="container">
       <div class="section-head reveal">
-        <span class="eyebrow">Credentials &amp; Memberships</span>
-        <h2>Ongoing training, because learning doesn't stop</h2>
-        <p>Admissions practices shift every year. Jade stays active in professional training and national counseling networks so her guidance reflects what's actually happening on campuses today.</p>
+        <span class="eyebrow">Packages</span>
+        <h2>Ways to work together</h2>
+        <p>[Placeholder — replace with your own package names, pricing, and details. Structure below is a starting point.]</p>
       </div>
-
-      <div class="timeline reveal">
-        <div class="t-row">
-          <div class="t-date">Spring 2025 &ndash; Present</div>
-          <div class="t-content">
-            <h3>UCLA College Counseling Certification Program</h3>
-            <div class="t-role">Student &middot; Remote, USA</div>
-            <p class="t-desc">Enrolled in a comprehensive program to deepen expertise in college admissions counseling.</p>
-          </div>
+      <div class="package-grid reveal">
+        <div class="package-card">
+          <h3>Essay Support</h3>
+          <p class="package-tagline">[Placeholder tagline — e.g. "For students who just need help finding their voice."]</p>
+          <ul class="package-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>[Add what's included, e.g. number of essay sessions]</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>[Add another feature]</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>[Add another feature]</li>
+          </ul>
+          <a href="#schedule" class="package-cta">Learn more</a>
         </div>
-        <div class="t-row">
-          <div class="t-date">April 2026 &ndash; Present</div>
-          <div class="t-content">
-            <h3>Higher Education Consultants Association (HECA)</h3>
-            <div class="t-role">Provisional Member &middot; previously Student Affiliate, Spring 2025&ndash;April 2026</div>
-            <p class="t-desc">Engaged with a national network of college counseling professionals to stay informed on best practices and industry trends.</p>
-          </div>
+        <div class="package-card featured">
+          <span class="package-featured-tag">Most popular</span>
+          <h3>Full Application Support</h3>
+          <p class="package-tagline">[Placeholder tagline — e.g. "End-to-end guidance through the entire process."]</p>
+          <ul class="package-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>[Add what's included, e.g. college list building]</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>[Add another feature, e.g. essay coaching]</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>[Add another feature, e.g. application review]</li>
+          </ul>
+          <a href="#schedule" class="package-cta">Learn more</a>
         </div>
-        <div class="t-row">
-          <div class="t-date">Spring 2023</div>
-          <div class="t-content">
-            <h3>Lumina Life Coach Essentials Program</h3>
-            <div class="t-role">Student &middot; Remote, USA</div>
-            <p class="t-desc">Completed life coaching coursework and pro bono coaching sessions, coaching clients on topics from relationships to time management.</p>
-          </div>
-        </div>
-        <div class="t-row">
-          <div class="t-date">June 2019</div>
-          <div class="t-content">
-            <h3>Stanford University</h3>
-            <div class="t-role">B.S. Symbolic Systems, Concentration in Cognitive Science &middot; Stanford, CA</div>
-            <p class="t-desc">Four-year collegiate rower with Stanford Women's Crew; volunteered with Girls Who Code teaching coding fundamentals.</p>
-          </div>
+        <div class="package-card">
+          <h3>Comprehensive Counseling</h3>
+          <p class="package-tagline">[Placeholder tagline — e.g. "Multi-year support starting early in high school."]</p>
+          <ul class="package-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>[Add what's included, e.g. course selection guidance]</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>[Add another feature, e.g. summer planning]</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>[Add another feature, e.g. ongoing check-ins]</li>
+          </ul>
+          <a href="#schedule" class="package-cta">Learn more</a>
         </div>
       </div>
     </div>
