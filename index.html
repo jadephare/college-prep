@@ -409,6 +409,31 @@
   .check-list li{ display:flex; gap:10px; align-items:flex-start; font-size:15px; color:var(--ink); }
   .check-list svg{ flex:none; width:19px; height:19px; margin-top:2px; color:var(--accent); }
 
+  .membership{
+    margin-top:24px;
+    padding-top:20px;
+    border-top:1px solid var(--line);
+    display:flex;
+    align-items:center;
+    gap:12px;
+  }
+  .membership-logo{
+    width:40px;
+    height:40px;
+    object-fit:contain;
+    flex:none;
+    border-radius:8px;
+    background:var(--paper);
+    border:1px solid var(--line);
+    padding:4px;
+  }
+  .membership-label{
+    font-size:13.5px;
+    color:var(--ink-soft);
+    font-weight:500;
+    line-height:1.4;
+  }
+
   .acceptances{
     margin-top:32px;
     padding-top:28px;
@@ -421,6 +446,13 @@
     background:var(--paper); border:1px solid var(--line);
     padding:8px 14px; border-radius:999px;
   }
+  .acceptances-standalone{
+    max-width:820px;
+    margin:0 auto;
+    text-align:center;
+  }
+  .acceptances-standalone .eyebrow{ justify-content:center; }
+  .acceptances-standalone .chip-row{ justify-content:center; margin-top:18px; }
 
   @media(min-width:860px){
     .about-grid{ grid-template-columns:0.85fr 1.15fr; }
@@ -622,9 +654,9 @@
     </a>
     <ul class="nav-links">
       <li><a href="#philosophy">Philosophy</a></li>
+      <li><a href="#reviews">Reviews</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#packages">Packages</a></li>
-      <li><a href="#reviews">Reviews</a></li>
       <li><a href="#schedule">Schedule</a></li>
     </ul>
     <a href="#schedule" class="nav-cta">Get in touch</a>
@@ -634,9 +666,9 @@
   </nav>
   <div class="mobile-menu" id="mobileMenu">
     <a href="#philosophy">Philosophy</a>
+    <a href="#reviews">Reviews</a>
     <a href="#about">About</a>
     <a href="#packages">Packages</a>
-    <a href="#reviews">Reviews</a>
     <a href="#schedule" class="mobile-cta">Get in touch</a>
   </div>
   <svg class="brand-ribbon" viewBox="0 0 1200 40" preserveAspectRatio="none" aria-hidden="true">
@@ -660,7 +692,7 @@
           <li>Empowering students in their college discovery process</li>
           <li>Supporting students through what's ahead, from list to launch</li>
         </ul>
-        <p class="hero-follow">Your kid is ready for this next chapter. We know this can be a stressful time and we'll manage the logistics that come with getting there. With expert knowledge and experience, we're here to help.</p>
+        <p class="hero-follow">Your high schooler is ready for this next chapter. We know this can be a stressful time and we'll manage the logistics that come with getting there. With expert knowledge and experience, we're here to help.</p>
         <div class="hero-ctas">
           <a href="#schedule" class="btn btn-primary">Book a meeting</a>
         </div>
@@ -683,93 +715,6 @@
         I love supporting curious students to find a school where they will thrive. If you value lifelong learning and want a counselor with a student-centered approach, we'd be a good match.
       </blockquote>
       <span class="placeholder-tag">Jade Thornton</span>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about" class="section-alt">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="eyebrow">About Jade</span>
-        <h2>Who you're working with</h2>
-      </div>
-      <div class="about-grid">
-        <div class="reveal">
-          <ul class="check-list">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Independent Educational Consultant since 2024</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>B.S. Symbolic Systems, Stanford University</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Four-year Division I athlete, Stanford Women's Crew</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Proud parent of a pup named Shasta</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Avid reader, ahead of my goal to read 52 books this year</li>
-          </ul>
-        </div>
-        <div class="about-body reveal">
-          <p>Jade Thornton is an independent college admissions counselor based in Denver, Colorado, working with students across the country. She holds a B.S. in Symbolic Systems from Stanford University, where she concentrated in cognitive science, rowed for four years with Stanford Women's Crew, and volunteered with Girls Who Code teaching coding fundamentals to low-income students.</p>
-          <p>Since 2024, Jade has guided high school students individually through every stage of admissions: building a personalized college list, developing application strategy, and drafting essays that sound like the student, not a template. She's currently enrolled in UCLA's College Counseling Certification Program and is a Provisional Member of the Higher Education Consultants Association (HECA).</p>
-          <p>Her background in cognitive science and life coaching shapes how she works: helping students get clear on what they actually want before worrying about what looks good on paper.</p>
-
-          <div class="acceptances">
-            <span class="eyebrow">Recent student acceptances</span>
-            <div class="chip-row">
-              <span class="chip">Vanderbilt</span>
-              <span class="chip">Tulane</span>
-              <span class="chip">Boston College</span>
-              <span class="chip">St. Olaf</span>
-              <span class="chip">University of Miami</span>
-              <span class="chip">UC Santa Barbara</span>
-              <span class="chip">UC Santa Cruz</span>
-              <span class="chip">Colorado State University</span>
-              <span class="chip">CU Boulder</span>
-              <span class="chip">UT Austin</span>
-              <span class="chip">Lewis and Clark</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PACKAGES -->
-  <section id="packages">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="eyebrow">Packages</span>
-        <h2>Ways to work together</h2>
-        <p>[Placeholder — replace with your own package names, pricing, and details. Structure below is a starting point.]</p>
-      </div>
-      <div class="package-grid reveal">
-        <div class="package-card">
-          <h3>Essay Support</h3>
-          <p class="package-tagline">[Placeholder tagline — e.g. "For students who just need help finding their voice."]</p>
-          <ul class="package-list">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>[Add what's included, e.g. number of essay sessions]</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>[Add another feature]</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>[Add another feature]</li>
-          </ul>
-          <a href="#schedule" class="package-cta">Learn more</a>
-        </div>
-        <div class="package-card featured">
-          <span class="package-featured-tag">Most popular</span>
-          <h3>Full Application Support</h3>
-          <p class="package-tagline">[Placeholder tagline — e.g. "End-to-end guidance through the entire process."]</p>
-          <ul class="package-list">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>[Add what's included, e.g. college list building]</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>[Add another feature, e.g. essay coaching]</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>[Add another feature, e.g. application review]</li>
-          </ul>
-          <a href="#schedule" class="package-cta">Learn more</a>
-        </div>
-        <div class="package-card">
-          <h3>Comprehensive Counseling</h3>
-          <p class="package-tagline">[Placeholder tagline — e.g. "Multi-year support starting early in high school."]</p>
-          <ul class="package-list">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>[Add what's included, e.g. course selection guidance]</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>[Add another feature, e.g. summer planning]</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>[Add another feature, e.g. ongoing check-ins]</li>
-          </ul>
-          <a href="#schedule" class="package-cta">Learn more</a>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -821,8 +766,107 @@
     </div>
   </section>
 
+
+  <!-- RECENT COLLEGES (standalone, not in nav) -->
+  <section id="recent-colleges">
+    <div class="container">
+      <div class="acceptances-standalone reveal">
+        <span class="eyebrow">Recent student acceptances</span>
+        <div class="chip-row">
+          <span class="chip">Vanderbilt</span>
+          <span class="chip">Tulane</span>
+          <span class="chip">Boston College</span>
+          <span class="chip">St. Olaf</span>
+          <span class="chip">University of Miami</span>
+          <span class="chip">UC Santa Barbara</span>
+          <span class="chip">UC Santa Cruz</span>
+          <span class="chip">Colorado State University</span>
+          <span class="chip">CU Boulder</span>
+          <span class="chip">UT Austin</span>
+          <span class="chip">Lewis and Clark</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section-alt">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">About Jade</span>
+        <h2>Who you're working with</h2>
+      </div>
+      <div class="about-grid">
+        <div class="reveal">
+          <ul class="check-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Independent Educational Consultant since 2024</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>B.S. Symbolic Systems, Stanford University</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Four-year Division I athlete, Stanford Women's Crew</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Proud parent of a pup named Shasta</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Avid reader, ahead of her goal to read 52 books this year</li>
+          </ul>
+          <div class="membership">
+            <img src="HECA_logo.png" alt="HECA member logo" class="membership-logo">
+            <span class="membership-label">Provisional Member, Higher Education Consultants Association</span>
+          </div>
+        </div>
+        <div class="about-body reveal">
+          <p>Jade Thornton is an independent educational counselor (IEC) based in Denver, Colorado, working with students across the country. She holds a B.S. in Symbolic Systems from Stanford University (see if you can find Jade on the Symbolic Systems major page), where she concentrated in cognitive science. After graduating, Jade worked as a software engineer.</p>
+          <p>Since 2024, Jade has guided high school students individually through every stage of admissions: building a personalized college list, developing application strategy, and drafting essays that sound like the student, not a template.</p>
+          <p>Jade has supported low income and first generation students through PeerForward. This group teaches small groups of high schoolers about the college application process and so they can bring that knowledge to their high school.</p>
+          <p>When she's not working with students or attending a webinar about how to apply to college, you can find Jade backpacking, hiking up a 14er, or attending a contact improv jam aka dancing. Jade is always looking for a new book to read so bring her your  book recommendations.</p>
+          <p>She's currently enrolled in UCLA's College Counseling Certification Program (only one more left!) and is a Provisional Member of the Higher Education Consultants Association (HECA).</p>
+          <p>Her background in cognitive science and computer engineering shapes how she works: helping students get clear on what they actually want before worrying about what looks good on paper.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PACKAGES -->
+  <section id="packages">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Packages</span>
+        <h2>Ways to work together</h2>
+      </div>
+      <div class="package-grid reveal">
+        <div class="package-card">
+          <h3>Early Starter</h3>
+          <p class="package-tagline">Discover what you love (9th and 10th graders)</p>
+          <ul class="package-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Tailored course planning with your goals in mind</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Helping students figure out who they are and what they want to do with their summers</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Ongoing check-ins to stay on track and chart your own path</li>
+          </ul>
+          <a href="#schedule" class="package-cta">Learn more</a>
+        </div>
+        <div class="package-card featured">
+          <span class="package-featured-tag">Most popular</span>
+          <h3>Full Application Support</h3>
+          <p class="package-tagline">Let's get you to college (11th + 12th graders)</p>
+          <ul class="package-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Customized college list based on the student's interests and qualifications</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Support through the essay writing process from brainstorming to hitting submit</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Review of all applications submitted</li>
+          </ul>
+          <a href="#schedule" class="package-cta">Learn more</a>
+        </div>
+        <div class="package-card">
+          <h3>Essay Support</h3>
+          <p class="package-tagline">For motivated students to authentically show their voice</p>
+          <ul class="package-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Purposeful brainstorming to spark strong ideas</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Virtual reviews so students leave with clarity</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Support through essay pivots</li>
+          </ul>
+          <a href="#schedule" class="package-cta">Learn more</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- SCHEDULE / CALENDLY -->
-  <section id="schedule">
+  <section id="schedule" class="section-alt">
     <div class="container">
       <div class="section-head reveal">
         <span class="eyebrow">Schedule a Meeting</span>
