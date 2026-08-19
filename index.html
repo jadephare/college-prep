@@ -407,7 +407,7 @@
   }
 
   /* ---------- Section shells ---------- */
-  section{ padding:76px 0; }
+  section{ padding:76px 0; scroll-margin-top:96px; }
   .section-alt{ background:var(--bg-alt); }
   .section-head{ max-width:640px; margin-bottom:44px; }
   .section-head h2{ font-size:clamp(26px,4vw,36px); margin-top:14px; }
@@ -416,7 +416,12 @@
   /* ---------- About ---------- */
   .about-grid{
     display:grid;
-    gap:40px;
+    gap:0;
+  }
+  .about-body{
+    margin-top:24px;
+    padding-top:20px;
+    border-top:1px solid var(--line);
   }
   .about-body p{ color:var(--ink-soft); font-size:16px; margin-bottom:16px; }
   .about-body p:last-child{margin-bottom:0;}
@@ -481,7 +486,8 @@
   .acceptances-standalone .chip-row{ justify-content:center; margin-top:18px; }
 
   @media(min-width:860px){
-    .about-grid{ grid-template-columns:0.85fr 1.15fr; }
+    .about-grid{ grid-template-columns:0.85fr 1.15fr; gap:40px; }
+    .about-body{ margin-top:0; padding-top:0; border-top:none; }
   }
 
   /* ---------- Philosophy ---------- */
@@ -739,7 +745,7 @@
   <section class="hero" id="home">
     <div class="container hero-grid">
       <div>
-        <span class="eyebrow">Independent College Admissions Counseling</span>
+        <span class="eyebrow">Independent Educational Consulting</span>
         <h1>Helping students find the college that <span class="mark">fits<svg viewBox="0 0 200 30" preserveAspectRatio="none" aria-hidden="true"><path d="M4,20 C60,4 140,4 196,18"/></svg></span></h1>
         <ul class="hero-list">
           <li>One-on-one guidance for college lists, essays, applications, and more</li>
