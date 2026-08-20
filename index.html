@@ -170,6 +170,11 @@
     padding:16px 24px;
     gap:16px;
   }
+  .nav-right{
+    display:flex;
+    align-items:center;
+    gap:16px;
+  }
   .logo{
     font-family:var(--font-display);
     font-weight:700;
@@ -246,9 +251,11 @@
   }
   .menu-btn svg{width:18px; height:18px;}
 
+  @media(min-width:480px){
+    .nav-cta{display:inline-block;}
+  }
   @media(min-width:1040px){
     .nav-links{display:flex;}
-    .nav-cta{display:inline-block;}
     .menu-btn{display:none;}
   }
 
@@ -712,17 +719,19 @@
         <span class="logo-tag">College Prep</span>
       </span>
     </a>
-    <ul class="nav-links">
-      <li><a href="#philosophy">Philosophy</a></li>
-      <li><a href="#reviews">Reviews</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#packages">Packages</a></li>
-      <li><a href="#schedule">Schedule</a></li>
-    </ul>
-    <a href="#schedule" class="nav-cta">Get in touch</a>
-    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
-    </button>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="#philosophy">Philosophy</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#packages">Packages</a></li>
+        <li><a href="#schedule">Schedule</a></li>
+      </ul>
+      <a href="#schedule" class="nav-cta">Get in touch</a>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+      </button>
+    </div>
   </nav>
   <div class="mobile-menu" id="mobileMenu">
     <a href="#philosophy">Philosophy</a>
@@ -850,7 +859,7 @@
         </div>
         <div class="about-body reveal">
           <p>Jade Thornton is an Independent Educational Consultant (IEC) based in Denver, Colorado, working with students across the country. She holds a B.S. in Symbolic Systems from Stanford University (see if you can find Jade on the Symbolic Systems major page), where she concentrated in cognitive science. After graduating, Jade worked as a software engineer.</p>
-          <p>Jade enjoys supporting low-income and first-generation students through organizations like PeerForward. She is currently enrolled in UCLA's College Counseling Certification Program and is expected to complete the program in December.</p>
+          <p>Jade enjoys supporting students of all backgrounds. In an effort to promote equality in the college application process, she works with organizations such as PeerForward to support low-income and first-generation students. She is currently enrolled in UCLA's College Counseling Certification Program and is expected to complete the program in December.</p>
           <p>When she's not working with students or attending a webinar to stay up to date on all things related to college applications, you can find Jade backpacking, hiking up a 14er, or dancing to music in her living room.</p>
           <p>Her background in cognitive science and computer engineering shapes how she works: helping students get clear on what they actually want before worrying about what looks good on paper.</p>
         </div>
@@ -866,42 +875,40 @@
         <h2>Ways to work together</h2>
       </div>
       <div class="package-grid reveal">
-        <div class="package-card">
-          <div class="package-card-head">
-            <h3>Early Starter</h3>
-            <p class="package-tagline">Discover what you love (9th and 10th graders)</p>
-          </div>
-          <ul class="package-list">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Tailored course planning with your goals in mind</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Helping students figure out who they are and what they want to do with their summers</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Ongoing check-ins to stay on track and chart your own path</li>
-          </ul>
-          <a href="#schedule" class="package-cta">Learn more</a>
-        </div>
         <div class="package-card featured">
           <span class="package-featured-tag">Most popular</span>
           <div class="package-card-head">
             <h3>Full Application Support</h3>
-            <p class="package-tagline">Let's get you to college (11th + 12th graders)</p>
+            <p class="package-tagline">Get into college (for 11th & 12th graders)</p>
           </div>
           <ul class="package-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Regular one-on-one meetings that fit the student's schedule</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Organization and guidance in managing deadlines, including strategizing about early application options</li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Customized college list based on the student's interests and qualifications</li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Support through the essay writing process from brainstorming to hitting submit</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Review of all applications submitted</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Detailed review of all applications before submission</li>
           </ul>
-          <a href="#schedule" class="package-cta">Learn more</a>
+        </div>
+        <div class="package-card">
+          <div class="package-card-head">
+            <h3>Early Starter</h3>
+            <p class="package-tagline">Add-on to "Full Application Support" (for 9th & 10th graders)</p>
+          </div>
+          <ul class="package-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Assistance choosing high school classes and summer activities with the student's goals in mind</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Helping students figure out who they want to be and explore majors and schools</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Ongoing check-ins to stay on track and chart the student's path</li>
+          </ul>
         </div>
         <div class="package-card">
           <div class="package-card-head">
             <h3>Essay Support</h3>
-            <p class="package-tagline">For motivated students to authentically show their voice</p>
+            <p class="package-tagline">Targeted help with writing (for 11th & 12th graders)</p>
           </div>
           <ul class="package-list">
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Purposeful brainstorming to spark strong ideas</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Virtual reviews so students leave with clarity</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Support through essay pivots</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Feedback and reviews so students have a clear direction</li>
           </ul>
-          <a href="#schedule" class="package-cta">Learn more</a>
         </div>
       </div>
     </div>
